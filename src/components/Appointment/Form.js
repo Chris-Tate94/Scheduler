@@ -17,6 +17,11 @@ export default function Form(props) {
     props.onCancel();
   };
 
+  // const onSave = (student, interviewer) => {
+  //   //console.log("student", student);
+  //   //console.log("interviewr", interviewer);
+  // };
+
   return (
     <main className="appointment__card appointment__card--create">
       <section className="appointment__card-left">
@@ -27,8 +32,6 @@ export default function Form(props) {
             type="text"
             student={student}
             onChange={(event) => setStudent(event.target.value)}
-            onSave={props.onSave}
-            onCancle={props.onCancle}
 
             //   This must be a controlled component
             //   your code goes here
@@ -45,7 +48,7 @@ export default function Form(props) {
           <Button onClick={cancel} danger>
             Cancel
           </Button>
-          <Button onClick={props.onSave(student, interviewer)} confirm>
+          <Button onClick={() => props.onSave(student, interviewer)} confirm>
             Save
           </Button>
         </section>
