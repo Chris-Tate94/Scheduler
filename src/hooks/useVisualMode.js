@@ -10,6 +10,7 @@ export default function useVisualMode(initialMode) {
     if (replace) {
       history.pop();
     }
+    console.log(newMode);
 
     history.push(newMode);
   }

@@ -4,6 +4,7 @@ import axios from "axios";
 import "components/Application.scss";
 import DayList from "./DayList";
 import Appointment from "./Appointment";
+import useApplicationData from "hooks/useApplicationData";
 import {
   getAppointmentsForDay,
   getInterview,
@@ -33,12 +34,28 @@ export default function Application(props) {
       ...state.appointments,
       [id]: appointment,
     };
-    setState({ ...state, appointments });
 
-    axios
+    return axios
       .put(`http://localhost:8001/api/appointments/${id}`, { interview })
       .then((response) => {
-        return setState({ ...state, appointments });
+        setState({ ...state, appointments });
+      });
+  };
+
+  const deleteInterview = function (id) {
+    const appointment = {
+      ...state.appointments[id],
+      interview: null,
+    };
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment,
+    };
+
+    return axios
+      .delete(`http://localhost:8001/api/appointments/${id}`)
+      .then((response) => {
+        setState({ ...state, appointments });
       });
   };
 
@@ -52,6 +69,7 @@ export default function Application(props) {
         interview={interview}
         interviewers={interviewers}
         bookInterview={bookInterview}
+        deleteInterview={deleteInterview}
       />
     );
   });
@@ -69,10 +87,7 @@ export default function Application(props) {
         interviewers: all[2].data,
       }));
     });
-    //////////////////////////////////////////////////////
   }, []);
-
-  //console.log("Interviewers ", state.interviewers);
 
   return (
     <main className="layout">
