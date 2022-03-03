@@ -53,7 +53,6 @@ export default function useApplicationData() {
     return axios
       .put(`http://localhost:8001/api/appointments/${id}`, { interview })
       .then((response) => {
-        console.log(response);
         const updatedState = updateSpots(appointments, state);
         setState({ ...updatedState, appointments });
       });
@@ -72,7 +71,6 @@ export default function useApplicationData() {
     return axios
       .delete(`http://localhost:8001/api/appointments/${id}`)
       .then((response) => {
-        console.log(response);
         const updatedState = updateSpots(appointments, state);
         setState({ ...updatedState, appointments });
       });
