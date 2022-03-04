@@ -42,4 +42,6 @@ This React application is a single page app that allow's users the ability to do
 
 !["Appointment Form"](https://github.com/Chris-Tate94/Scheduler/blob/master/docs/appointment-form.png?raw=true)
 
-!["Homepage with an appointment booked and an error message"](https://github.com/Chris-Tate94/Scheduler/blob/master/docs/confirmation-and-diff-day-highlighted.png?raw=true)
+!["Homepage with a confirmation notice and a different day hovered "](https://github.com/Chris-Tate94/Scheduler/blob/master/docs/confirmation-and-diff-day-highlighted.png?raw=true)
+
+!["Homepage with an appointment booked and an appropriate error message ](https://github.com/Chris-Tate94/Scheduler/blob/master/docs/home-page-with-booked-appt-and-error.png?raw=true)
