@@ -39,3 +39,7 @@ This React application is a single page app that allow's users the ability to do
 * A user is shown a status indicator while asynchronous operations are in progress.
 * When the user presses the close button of the error they are returned to the Form or Show view (skipping Status and Confirm).
 * The application makes API requests to load and persist data. We do not lose data after a browser refresh.
+
+!["Appointment Form"](https://github.com/Chris-Tate94/Scheduler/blob/master/docs/appointment-form.png?raw=true)
+
+!["Homepage with an appointment booked and an error message"](https://github.com/Chris-Tate94/Scheduler/blob/master/docs/confirmation-and-diff-day-highlighted.png?raw=true)
