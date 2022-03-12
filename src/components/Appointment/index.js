@@ -65,9 +65,9 @@ export default function Appointment(props) {
       )}
       {mode === EDIT && (
         <Form
-          student={props.student}
+          student={props.interview.student}
           interviewers={props.interviewers}
-          onCancel={() => transition(EMPTY)}
+          onCancel={() => back()}
           onSave={save}
         />
       )}
